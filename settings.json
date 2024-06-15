@@ -1,0 +1,16 @@
+{
+    "max_products_per_page": 8,
+    "order_bot_token": "",
+    "announcement_channel": "",
+
+    "bot": 0,
+    "chat_id": 0,
+    "owners": [],
+
+    "cashapp_tag": "$Example",
+    "cashapp_name": "Example User",
+    "support_handle": "",
+
+    "word_path": "./words.txt",
+    "order_duration_time": 10
+}
