@@ -14,6 +14,10 @@ from extensions.database import database
 from extensions.errors import errors
 from extensions.file import FileSystem
 
+menu = r'''👵 account\.mom —— \#1 Account Shop
+
+account\.mom is an independently ran log shop that focuses on user privacy, ratings, and quality accounts\. To get started, check out the menu by pressing the "Shop" button\.
+'''
 user_state = {}
 user_depositing = {}
 
@@ -74,10 +78,7 @@ async def start(message):
       user = await database.__fetch_user__(message.from_user.id)
       text = 'Welcome Back, ID: *{}*'.format(message.from_user.id)
       if not user:
-         text = r'''👵 account\.mom —— \#1 Account Shop
-
-account\.mom is an independently ran log shop that focuses on user privacy, ratings, and quality accounts\. To get started, check out the menu by pressing the "Shop" button\.
-'''
+         text = menu
          await database.__add_user__(message.from_user.id)
          print(f'{colorama.Style.BRIGHT}{colorama.Fore.LIGHTBLUE_EX}SUCCESS{colorama.Style.RESET_ALL} (REGISTERED)', f'{message.from_user.id}')
       user = await database.__fetch_user__(message.from_user.id)
