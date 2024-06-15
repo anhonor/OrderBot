@@ -1,0 +1,5 @@
+aiohttp
+colorama
+pyTelegramBotAPI
+pytz
+sqlite3
