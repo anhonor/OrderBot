@@ -1,0 +1,2 @@
+example@gmail.com:example | Balance: $0.00
+african@gmail.com:african | Balance: $100.00
