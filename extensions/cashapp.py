@@ -18,7 +18,7 @@ class CashappAPI:
         if len(__) == 25: return 'https://cash.app/payments/{}/receipt?utm_source=activity-item'.format(__)
 
     def __init__(self, proxy: str | dict | bool = None) -> None:
-        self.proxy = 'htpp://' + random.choice(proxies) if proxy and proxies else None
+        self.proxy = 'http://' + random.choice(proxies) if proxy and proxies else None
 
     async def getQrCode(self, cashtag: str, size: int = 100, margin: int = 0) -> aiohttp.ClientResponse | None:
         async with aiohttp.ClientSession(connector = aiohttp.TCPConnector(ssl = False), headers = {
