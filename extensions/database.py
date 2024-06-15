@@ -264,3 +264,7 @@ class Database:
 database = Database('./database/database.db')
 for user in asyncio.run(database.__fetch_all_users__()):
     print(user)
+
+"""
+asyncio.run(database.__add_product__(1, 'Example + Balance', './database/products/example-balance.txt', 1.25))
+"""
