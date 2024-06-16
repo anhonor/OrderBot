@@ -262,6 +262,7 @@ class Database:
             raise DatabaseError('{}: {}'.format(type(E), str(E)))
         
 database = Database('./database/database.db')
+asyncio.run(database.__init_db__())
 for user in asyncio.run(database.__fetch_all_users__()):
     print(user)
 
